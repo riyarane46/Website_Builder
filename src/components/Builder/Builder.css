@@ -1,0 +1,82 @@
+.builder-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust based on your header height */
+    overflow: hidden;
+  }
+  
+  .canvas {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f2f5;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .template-preview {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 600px;
+  }
+  
+  .element-wrapper {
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .selected-element {
+    outline: 2px dashed #4a6cf7;
+    outline-offset: 2px;
+  }
+  
+  .editor-panel {
+    width: 300px;
+    background-color: white;
+    border-left: 1px solid #e0e0e0;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .editor-placeholder {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Preview mode styles */
+  .preview-mode .canvas {
+    padding: 0;
+  }
+  
+  .preview-mode .template-preview {
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .builder-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .editor-panel {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #e0e0e0;
+    }
+  }
+  
